@@ -8,9 +8,7 @@ python --version >nul 2>&1
 
 xcopy "%~dp0.." "C:\YT-Installer" /s /e /i /y
 mklink "C:\Users\%USERNAME%\OneDrive\Desktop\VDownloader.exe" "C:\YT-Installer\dist\main\main.exe"
-
-
-cmd
+mklink "C:\Users\%USERNAME%\Desktop\VDownloader.exe" "C:\YT-Installer\dist\main\main.exe"
 
 
 if %errorlevel% neq 0 (
