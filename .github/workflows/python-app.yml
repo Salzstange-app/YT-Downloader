@@ -17,12 +17,15 @@ jobs:
         uses: actions/setup-python@v5.1.0
 
     
+  Install:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Install pyinstaller
         run: pip install pyinstaller
 
       - name: setup exe
         run: pyinstaller main.py
-        
 
           
      
