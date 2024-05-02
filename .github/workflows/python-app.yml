@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+      - main
+    
+  schedule:
+    - cron: '* * 1 * 1'
+  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build .exe
+        uses: actions/setup-python@v5.1.0
+
+    
+      - name: Install pyinstaller
+        run: pip install pyinstaller
+
+      - name: setup exe
+        run: pyinstaller main.py
+        
+
+          
+     
+
+
+    
