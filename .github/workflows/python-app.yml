@@ -24,6 +24,10 @@ jobs:
       - name: Install pyinstaller
         run: pip install pyinstaller
 
+  Deploy:
+    needs: Install
+    runs-on: ubuntu-latest
+    steps:
       - name: setup exe
         run: pyinstaller main.py
 
