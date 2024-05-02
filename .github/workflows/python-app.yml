@@ -24,15 +24,6 @@ jobs:
       - name: Build .exe
         run: pyinstaller -y  main.py
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy .exe
-        uses: actions/upload-artifact@v2
-        with:
-          name: main-exe
-          path: ./dist/main
           
      
 
